@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Angular frontend image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/angular-app:latest ./angular-app/src
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/angular-app:latest ./angular-app
 
       - name: Push backend image
         run: |
