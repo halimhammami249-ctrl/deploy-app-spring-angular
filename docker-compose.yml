@@ -1,11 +1,12 @@
 version: "3.3"
 services:
   angular-app:
-    image: angular-app
+    image: halimhammami/angular-app:latest
     ports:
-      - "0.0.0.0:4200:80"      
+      - "0.0.0.0:4200:80"
+
   spring-boot-app:
-    image: spring-app
+    image: halimhammami/spring-app:latest
     ports:
       - "0.0.0.0:8081:8081"
     environment:
@@ -32,5 +33,6 @@ services:
       - '0.0.0.0:3306:3306'
     volumes:
       - demo:/var/lib/mysql
+
 volumes:
   demo:
