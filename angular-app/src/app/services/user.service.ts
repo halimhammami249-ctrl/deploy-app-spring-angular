@@ -8,7 +8,7 @@ import { User } from '../models/User';
 })
 export class UserService {
 
-  baseURL:string="http://192.168.187.9:8081/user"
+  baseURL:string="https://miniature-disco-5g7gjxvpp97634576-8081.app.github.dev/"
   constructor(private  httpClient:HttpClient) { }
 
   getAllUsers():Observable<any>{
