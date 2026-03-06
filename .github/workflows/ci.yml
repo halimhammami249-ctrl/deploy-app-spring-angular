@@ -53,3 +53,11 @@ jobs:
       - name: Push Angular frontend image
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/angular-app:latest
+
+      # 9️⃣ Test full application with Docker Compose
+      - name: Test application with Docker Compose
+        run: |
+          docker-compose -f docker-compose.yml up -d
+          # wait for containers to start
+          sleep 20
+          docker ps
